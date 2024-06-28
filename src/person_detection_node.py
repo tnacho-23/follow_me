@@ -39,12 +39,12 @@ def image_callback(msg):
     # Dibujar las detecciones y obtener las coordenadas
     for box in person_detections:
         bbox = box.xyxy[0].cpu().numpy()  # Obtener las coordenadas del bounding box
-        x1, y1, x2, y2 = map(int, bbox)  # Convertir las coordenadas a enteros
-        cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)  # Dibujar el rectángulo alrededor de la persona
+        x1, y1, w, h = map(int, bbox)  # Convertir las coordenadas a enteros
+        cv2.rectangle(frame, (x1, y1), (w, h), (255, 0, 0), 2)  # Dibujar el rectángulo alrededor de la persona
         cv2.putText(frame, f"Person: {box.conf[0]:.2f}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)  # Añadir etiqueta
         
         # Añadir coordenadas al mensaje
-        positions.data.extend([x1, y1, x2, y2])
+        positions.data.extend([x1, y1, w, h])
         
     # Publicar las coordenadas en el tópico /position
     position_pub.publish(positions)
