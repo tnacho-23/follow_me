@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/bender/pioneer_ws/src/follow_me/build/devel/setup.sh
