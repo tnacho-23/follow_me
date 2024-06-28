@@ -9,7 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/bender/pioneer_ws/src/follow_me/build/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/bender/pioneer_ws/src/follow_me/build/devel/lib:$LD_LIBRARY_PATH"
-export PATH='/opt/ros/noetic/bin:/usr/local/cuda/bin:/home/bender/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export PATH='/opt/ros/noetic/bin:/home/bender/.local/bin:/usr/local/cuda/bin:/home/bender/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
 export PKG_CONFIG_PATH="/home/bender/pioneer_ws/src/follow_me/build/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/bender/pioneer_ws/src/follow_me/build'
 export ROS_PACKAGE_PATH="/home/bender/pioneer_ws/src/follow_me:$ROS_PACKAGE_PATH"
